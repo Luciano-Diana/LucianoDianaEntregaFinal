@@ -1,0 +1,117 @@
+
+$color-ppal: #999999;
+$color-seg: #999999;
+$color-ter:#999999;
+$color-nav: #3d3b3b;
+
+/*
+@mixin noe ($witdh,$height);
+*/
+
+body {
+    background-color: $color-seg;
+}
+.fondo-nav{
+    background-color: $color-ppal;
+    .container-fluid{
+        .navbar-brand{
+            font-size: 30px;
+            font-weight: bold;
+            color: $color-nav;
+        }
+        .navbar-collapse{
+            .navbar-me{
+                .nav-item{
+                    .nav-link{
+                        color: $color-nav;
+                        font-size: 20px;
+                        font-weight: bolder;
+                    }
+                }
+            }
+        }
+    }
+}
+header{
+    img{
+        width: 100%;
+    }
+}
+main{
+    .tarjetas{
+        display: flex;
+        justify-content: space-between;
+        margin-top: 20px;
+        margin-right: 10px;
+        margin-left: 10px;
+        margin-bottom: 60px;
+        .card-body{
+            display: flex;
+            flex-direction: column;
+            .card-title{
+                text-align: center;
+            }
+            .btn-color{
+                background-color: $color-ppal;
+            }
+        }
+    }
+}
+footer{
+    @extend .fondo-nav;
+   width: 100%;   
+   height: 40px; 
+    position: fixed;
+    bottom: 0;
+    text-align: right;
+     
+    .redessociales {
+        position: absolute;
+        top: 8px;
+        right: 60px; 
+        .instagram {
+            width: 30px;
+            height: 25px;
+            display: inline-block;
+            }
+        .youtube {
+                width: 30px;
+                height: 25px;
+                display: inline-block; 
+            }
+              
+        .facebook {
+                width: 30px;
+                height: 25px;
+                display: inline-block; 
+            }
+   }
+}
+
+.familia{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-size: 20px;
+    .familia1{
+        width: 70%;
+        height: 600px;
+        margin-top: 5%;
+        margin-bottom: 5%;
+    }
+}
+.servicios{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+   
+    .serv{
+        display: flex;
+        flex-direction: column;
+        margin: 5% 2.5% 5% 2.5%;
+    
+    
+    }
+}
