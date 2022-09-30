@@ -1,12 +1,8 @@
-
 $color-ppal: #999999;
-$color-seg: #999999;
+$color-seg: hsl(0, 0%, 90%);
 $color-ter:#999999;
 $color-nav: #3d3b3b;
 
-/*
-@mixin noe ($witdh,$height);
-*/
 
 body {
     background-color: $color-seg;
@@ -26,17 +22,17 @@ body {
                         color: $color-nav;
                         font-size: 20px;
                         font-weight: bolder;
+                        font-family: 'Roboto', sans-serif;
+                        &:hover{
+                            color: white;
+                        }
                     }
                 }
             }
         }
     }
 }
-header{
-    img{
-        width: 100%;
-    }
-}
+
 main{
     .tarjetas{
         display: flex;
@@ -45,18 +41,23 @@ main{
         margin-right: 10px;
         margin-left: 10px;
         margin-bottom: 60px;
-        .card-body{
-            display: flex;
-            flex-direction: column;
-            .card-title{
-                text-align: center;
-            }
-            .btn-color{
-                background-color: $color-ppal;
+        .card1{
+            width: 30%;
+            .card-body{
+                display: flex;
+                flex-direction: column;
+                .card-title{
+                    text-align: center;
+                }
+                .btn-color{
+                    background-color: $color-ter;
+                }
             }
         }
+        
     }
 }
+
 footer{
     @extend .fondo-nav;
    width: 100%;   
@@ -87,31 +88,237 @@ footer{
             }
    }
 }
-
+/*Nosotros*/
 .familia{
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     font-size: 20px;
+    .titulonosotros{
+        color: $color-nav;
+        text-align: center;
+        margin: 5% 2.5% 1.5% 2.5%;
+        font-family: 'Roboto', sans-serif;
+        font-size: 45px;
+    }
     .familia1{
         width: 70%;
         height: 600px;
         margin-top: 5%;
         margin-bottom: 5%;
     }
+    .nosotros{
+        text-align: left;
+        padding: 2% 5% 2% 5%;
+        ul{
+            padding-bottom: 5%;
+        }
+    }
 }
-.servicios{
+/*servicios*/
+
+    .services{
+        color: $color-nav;
+        text-align: center;
+        margin: 5% 2.5% 1.5% 2.5%;
+        font-family: 'Roboto', sans-serif;
+        font-size: 45px;
+    }
+    .servicios{
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+       
+        .serv{
+            display: flex;
+            flex-direction: column;
+            margin: 5% 2.5% 5% 2.5%;
+            width: 400px;
+            height: 501.48px;
+            img{
+                width: 400px;
+                height: 300px;
+            }
+        
+        
+        }
+    }
+
+/*Productos*/
+.productos{
+    color: $color-nav;
+    text-align: center;
+    margin: 5% 2.5% 1.5% 2.5%;
+    font-family: 'Roboto', sans-serif;
+    font-size: 45px;
+}
+#carrusel{
+    width: 100%;
+    .carousel-inner{
+        .carousel-item{
+            .w-100{
+                width: 100% !important;
+                height: 70vh !important;
+            }
+        }
+    }
+}
+/*empresa*/
+.emp{
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
-   
-    .serv{
+    width: 100%;
+        .empresas{
+            color: $color-nav;
+            text-align: center;
+            margin: 5% 2.5% 1.5% 2.5%;
+            font-family: 'Roboto', sans-serif;
+            font-size: 45px;
+        }
+        p{
+            color: $color-nav;  
+            text-align: center;
+            padding: 2% 5% 2% 5%;
+            font-size: 20px;
+        }
+}
+.empr{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: flex-start;
+    .card{
+        width: 30%;
+        height: 500px;
+        margin: 3.5% 5% 10% 5%;
         display: flex;
         flex-direction: column;
-        margin: 5% 2.5% 5% 2.5%;
+        align-items: center;   
+        img{
+            width: 90%;
+            height: 200px;
+            margin-top: 5%;
+        }
+    }
+}
+
+/*contacto*/
+
+.col{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+        .form-control{
+            width: 50%;
+            margin: 2% 0 2% 0;
+        }
+}
+.boton{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.contactanos{
+    color: $color-nav;
+    text-align: center;
+    margin: 3.5% 2.5% 3.5% 2.5%;
+    font-family: 'Roboto', sans-serif;
+    font-size: 30px;
+    text-decoration: underline;
+}
+.consulta{
+    color: $color-nav;
+    font-size: 20px;
+}
+
+
+
+@media only screen and (max-width:500px){
+    .empr{
+        display: flex;
+        flex-direction: column;
+        width: 100%;       
+        align-items: center;
+        .card{
+            width: 80%;
+            padding-bottom: 5%;
+        }
+    }
+    footer{
+        width: 100%;
+        padding-top: 5%;
+        height: 5%;
+        position: fixed;
+    }
+    main{
+        .tarjetas{
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            .card1{
+                width: 80%;
+                .card-body{
+                    .btn-color{
+                        background-color: $color-ppal;
+                    }
     
-    
+                }
+            }
+        }
+    }
+
+    .familia{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+        .titulonosotros{
+            font-size: 30px;
+        }
+        .familia1{
+            width: 90%;
+            height: 300px;
+        }
+        .nosotros{
+            text-align: left;
+            padding: 2% 5% 2% 5%;
+            ul{
+                padding-bottom: 10%;
+            }
+        }
+    }
+    .services{
+        font-size: 30px;
+    }
+    .servicios{
+        flex-direction: column;
+        padding: 5% 2.5% 5% 2.5%;
+       
+    }
+    .productos{
+        font-size: 30px;
+    }
+    #carrusel{
+        width: 100%;
+        .carousel-inner{
+            .carousel-item{
+                .w-100{
+                    width: 100% !important;
+                    height: 40vh !important;
+                }
+            }
+        }
+    }
+    .empr{
+        margin-bottom: 15%;
+        .card{
+            margin: 3.5% 5% 5% 5%;  
+        }
     }
 }
